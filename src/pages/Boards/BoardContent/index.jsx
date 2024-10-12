@@ -4,7 +4,6 @@ function BoardContent() {
   return (
     <Box
       sx={{
-        backgroundColor: 'primary.main',
         width: '100%',
         display: 'flex',
         alignItems: 'center',

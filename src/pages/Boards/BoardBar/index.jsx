@@ -8,7 +8,6 @@ function BoardBar() {
         // height: (theme) => {
         //   theme.trelloCustom.boardHeight
         // },
-        backgroundColor: 'primary.dark',
         display: 'flex',
         alignItems: 'center',
         height: (theme) => `${theme.trelloCustom.boardHeight}`

@@ -25,7 +25,9 @@ function AppBar() {
         height: (theme) => `${theme.trelloCustom.appBarHeight}`,
         display: 'flex',
         alignItems: 'center',
-        WebkitJustifyContent: 'space-between'
+        WebkitJustifyContent: 'space-between',
+        bgcolor: (theme) =>
+          theme.palette.mode === 'dark' ? '#2c3e50' : '#1565c0'
       }}
     >
       <Box
@@ -37,7 +39,7 @@ function AppBar() {
       >
         <AppsIcon
           sx={{
-            color: 'primary.main'
+            color: 'white'
           }}
         />
         <Box
@@ -51,7 +53,7 @@ function AppBar() {
             component={trelloLogo}
             inheritViewBox
             sx={{
-              color: 'primary.main'
+              color: 'white'
             }}
           />
           <Typography
@@ -59,7 +61,7 @@ function AppBar() {
             sx={{
               fontSize: '1.2rem',
               fontWeight: 'bold',
-              color: 'primary.main'
+              color: 'white'
             }}
           >
             Trello
@@ -69,7 +71,18 @@ function AppBar() {
         <Recent />
         <Starred />
         <Templates />
-        <Button variant="outlined">Create</Button>
+        <Button
+          variant="outlined"
+          sx={{
+            color: 'white',
+            border: 'none',
+            '&:hover': {
+              border: 'none'
+            }
+          }}
+        >
+          Create
+        </Button>
       </Box>
       <Box
         sx={{
@@ -83,14 +96,31 @@ function AppBar() {
           label="Search..."
           type="search"
           size="small"
+          sx={{
+            '& label': { color: 'white' },
+            '& input': { color: 'white' },
+            '& label.Mui-focused': { color: 'white' },
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: 'white'
+              },
+              '&:hover fieldset': {
+                borderColor: 'white'
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: 'white'
+              }
+            }
+          }}
         />
         <ModeSelect />
         <Tooltip title="Notification">
           <Badge
-            color="secondary"
+            color="warning"
             variant="dot"
             sx={{
-              cursor: 'pointer'
+              cursor: 'pointer',
+              color: 'white '
             }}
           >
             <NotificationsNoneIcon />
@@ -100,7 +130,8 @@ function AppBar() {
         <Tooltip title="Help">
           <HelpOutlineIcon
             sx={{
-              cursor: 'pointer'
+              cursor: 'pointer',
+              color: 'white '
             }}
           />
         </Tooltip>

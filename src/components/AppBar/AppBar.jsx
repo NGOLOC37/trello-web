@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box'
-import ModeSelect from '~/components/ModeSelect'
+import ModeSelect from '~/components/ModeSelect/ModeSelect'
 import AppsIcon from '@mui/icons-material/Apps'
 import { ReactComponent as trelloLogo } from '~/assets/trello.svg'
 import SvgIcon from '@mui/material/SvgIcon'
@@ -22,7 +22,7 @@ function AppBar() {
       px={1}
       sx={{
         width: '100%',
-        height: (theme) => `${theme.trelloCustom.appBarHeight}`,
+        height: (theme) => `${theme.trello.appBarHeight}`,
         display: 'flex',
         alignItems: 'center',
         WebkitJustifyContent: 'space-between',

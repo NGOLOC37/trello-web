@@ -31,7 +31,7 @@ function BoardBar() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        height: (theme) => `${theme.trelloCustom.boardHeight}`,
+        height: (theme) => `${theme.trello.boardBarHeight}`,
         gap: 2,
         overflowX: 'auto',
         bgcolor: (theme) =>
